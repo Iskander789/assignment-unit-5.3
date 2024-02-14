@@ -13,7 +13,23 @@ function addToCollection(collection, title, artist, yearPublished){
   return album;
 }
 
+console.log("Adding albums to my collection.");
+console.log(addToCollection(myCollection, 'Laurel Hell', 'Mitski', 2022));
+console.log(addToCollection(myCollection, 'Titanic Rising', 'Weyes Blood', 2019));
+console.log(addToCollection(myCollection, 'Youth Novels', 'Lykke Li', 2008));
+console.log(addToCollection(myCollection, 'Moth', 'Chairlift', 2016));
+console.log(addToCollection(myCollection, 'Blouse', 'Blouse', 2011));
+console.log(addToCollection(myCollection, 'Pet Sounds', 'The Beach Boys', 1966));
+console.log("My collection:", myCollection);
 
+function showCollection(collection){
+  for(let i =0; i<collection.length; i++){
+    console.log(`${collection[i].title} by ${collection[i].artist}, published in ${collection[i].yearPublished}`);
+  }
+}
+
+console.log("Showing my collection:");
+showCollection(myCollection);
 
 
 
