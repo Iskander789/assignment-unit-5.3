@@ -31,6 +31,22 @@ function showCollection(collection){
 console.log("Showing my collection:");
 showCollection(myCollection);
 
+function findByArtist(collection, artistToFind){
+  let results = [];
+  for(let i=0; i<collection.length; i++){
+    if(collection[i].artist == artistToFind){
+      results.push(collection[i]);
+    }
+  }
+  return results;
+}
+
+console.log("Searching for albums by Mitski, expect 1 result:", findByArtist(myCollection, 'Mitski'));
+console.log("Searching for albums by Weyes Blood, expect 1 result:", findByArtist(myCollection, 'Weyes Blood'));
+console.log("Searching for albums by Lykke Li, expect 1 result:", findByArtist(myCollection, 'Lykke Li'));
+console.log("Searching for albums by Chairlift, expect 1 result:", findByArtist(myCollection, 'Chairlift'));
+console.log("Searching for albums by Pixies, expect 0 results:", findByArtist(myCollection, 'Pixies'));
+
 
 
 
